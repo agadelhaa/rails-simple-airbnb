@@ -1,0 +1,18 @@
+<h2> Index: </h2>
+
+<div class="cards-flat">
+  <% @flats.each do |flat|%>
+    <%= link_to flat_path(flat), class: "links" do %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= flat.name %></h2>
+            <p><%= flat.address %></p>
+            <p> Number of Guests: <%= flat.number_of_guests %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= flat.price_per_night %></h2>
+      </div>
+    <%end%>
+  <%end%>
+</div>
